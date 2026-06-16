@@ -3,7 +3,7 @@ const chapters = [
     kicker: "Preface",
     title: "Why this book exists",
     summary:
-      "Theurgia takes a word the church once used for ritual that tried to compel the divine and turns it inside out: the only true god-working is God's own work for us in Christ. The book opens by naming that hope, declaring its Scripture-led standpoint, and refusing any practice that competes with Christ, Scripture, or grace.",
+      "Theurgia takes a word the church once used for ritual that tried to compel the divine and turns it inside out: the only true god-working is God's own work for us in Christ. The book opens by naming that hope, declaring its Protestant and creedal, Scripture-led standpoint, and refusing any practice that competes with Christ, Scripture, or grace.",
     questions: [
       "Why name this book Theurgia, a word once used for rituals meant to compel the divine, and what does turning it inside out reveal?",
       "What do Christians often mean by mysticism, and where does that language help or harm?",
@@ -12,7 +12,7 @@ const chapters = [
     ],
     interactions: [
       "A glossary toggle for contested terms such as theurgy, mysticism, magic, sacrament, and superstition.",
-      "A reader covenant that records interpretive commitments and names the book's confessional standpoint.",
+      "A reader covenant that names the book's standpoint, Protestant and creedal, and commits to reading Scripture as its own best interpreter under the rule of faith.",
     ],
     passages: [
       "Acts 19:13-20 (new believers burn their books of spells)",
@@ -48,7 +48,7 @@ const chapters = [
     kicker: "Chapter 2",
     title: "Biblical Mysticism",
     summary:
-      "A survey of Biblical encounters with God distinguishes covenantal communion from occult mastery, spectacle, and forbidden divination.",
+      "A survey of how God draws near, from theophany and temple to incarnation and Pentecost, gives Christian mysticism a positive Biblical shape, then marks where it parts from occult mastery, spectacle, and forbidden divination.",
     questions: [
       "How do theophany, temple, incarnation, and Pentecost shape Christian encounter?",
       "What is the difference between revelation received and power seized?",
@@ -158,10 +158,10 @@ const chapters = [
     kicker: "Chapter 7",
     title: "Prophecy and Speech",
     summary:
-      "The book then examines prophecy, blessing, curse, confession, and self-fulfilling speech under Biblical tests of truth, love, and submission to God.",
+      "The book first honors the God-given weight of human speech to bless, confess, and tell the truth, then weighs prophecy, curse, and self-fulfilling words under Biblical tests of truth, love, and submission to God.",
     questions: [
+      "What good has God given human words the power to do, and what can words never do?",
       "How does Biblical prophecy differ from positive thinking, prosperity claims, or fatalistic declaration?",
-      "What power does speech have, and what power does it not have?",
       "How should communities test claims without despising the Spirit's work?",
     ],
     interactions: [
@@ -334,7 +334,7 @@ const chapters = [
     kicker: "Chapter 15",
     title: "Incantations and Power",
     summary:
-      "This chapter confronts practices that use sacred words, sounds, or formulas as mechanisms of control rather than acts of faith.",
+      "Holding up faithful, trusting prayer as the contrast, this chapter confronts practices that use sacred words, sounds, or formulas as mechanisms of control rather than acts of faith.",
     questions: [
       "Why does Scripture forbid sorcery, divination, and manipulative spiritual power?",
       "How can Christian language be misused as an incantation?",

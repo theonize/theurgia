@@ -21,6 +21,10 @@ The title is deliberate and ironic: *theurgy* once named ritual that tried to
 compel the divine, and the book turns the word inside out to confess that the
 only true god-working is God's own work for us in Christ.
 
+It writes from a Protestant, creedal standpoint, reading Scripture as its own
+best interpreter while engaging the Catholic and Orthodox traditions charitably
+on contested practices such as relics, the sacraments, and the mystical tradition.
+
 ## Interactive book prototype
 
 The current prototype is a static GitHub Pages-ready site with:
