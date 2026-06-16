@@ -33,6 +33,8 @@ The current prototype is a static GitHub Pages-ready site with:
 - interactive navigation between chapters;
 - key Scripture passages, core questions, and proposed interactive elements
   per chapter;
+- a working discernment rubric on the closing chapter that scores a practice
+  against the rule and exports the result;
 - private browser-local reflection notes for each chapter.
 
 Open `index.html` locally, or serve the repository root with any static web

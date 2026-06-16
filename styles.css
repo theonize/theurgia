@@ -81,6 +81,7 @@ button {
 
 .button,
 .chapter-actions button,
+.tool-actions button,
 #save-reflection {
   background: var(--accent);
   color: #fff;
@@ -175,6 +176,120 @@ button:hover {
   border-left: 3px solid var(--line);
   margin: 0.35rem 0;
   padding-left: 0.7rem;
+}
+
+.tool-intro {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.tool-field {
+  display: block;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+#discernment-practice {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.7rem 0.9rem;
+  width: 100%;
+}
+
+.criteria {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.criterion {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin: 0;
+  padding: 0.9rem 1rem;
+}
+
+.criterion legend {
+  color: var(--accent-dark);
+  font-weight: 700;
+  padding: 0 0.4rem;
+}
+
+.criterion-q {
+  color: var(--muted);
+  margin: 0.2rem 0 0.7rem;
+}
+
+.ratings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ratings input[type="radio"] {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.ratings label {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 0.35rem 0.9rem;
+}
+
+.ratings input[type="radio"]:checked + label {
+  background: var(--accent);
+  border-color: var(--accent-dark);
+  color: #fff;
+}
+
+.ratings input[type="radio"]:focus-visible + label {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+.result {
+  border-left: 4px solid var(--line);
+  margin: 1rem 0;
+  min-height: 1.5rem;
+  padding: 0.6rem 0.9rem;
+}
+
+.result[data-state="incomplete"] {
+  border-left-color: var(--line);
+  color: var(--muted);
+}
+
+.result[data-state="receive"] {
+  border-left-color: #2f7d32;
+}
+
+.result[data-state="revise"],
+.result[data-state="pause"] {
+  border-left-color: #b8860b;
+}
+
+.result[data-state="reject"] {
+  border-left-color: #9b2226;
+}
+
+.tool-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+#discernment-status {
+  color: var(--muted);
+  min-height: 1.5rem;
 }
 
 textarea {

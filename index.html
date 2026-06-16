@@ -69,6 +69,34 @@
           <ul id="chapter-interactions"></ul>
         </section>
 
+        <section id="discernment-tool" class="chapter-section tool" hidden>
+          <h3>Discernment rubric</h3>
+          <p class="tool-intro">
+            Score a practice against the rule, then take the recommendation as a
+            starting point to test with your church.
+          </p>
+          <label class="tool-field" for="discernment-practice">Practice under review</label>
+          <input
+            id="discernment-practice"
+            type="text"
+            placeholder="Name the practice you are weighing..."
+          />
+          <div id="discernment-criteria" class="criteria"></div>
+          <p id="discernment-result" class="result" role="status" aria-live="polite"></p>
+          <label class="tool-field" for="discernment-notes">Notes</label>
+          <textarea
+            id="discernment-notes"
+            rows="4"
+            placeholder="Reasons, Scriptures, and questions for your pastor or group..."
+          ></textarea>
+          <div class="tool-actions">
+            <button id="discernment-save" type="button">Save locally</button>
+            <button id="discernment-export" type="button">Export as text</button>
+            <button id="discernment-reset" type="button">Reset</button>
+          </div>
+          <p id="discernment-status" role="status"></p>
+        </section>
+
         <section class="chapter-section reflection">
           <h3>Reader reflection</h3>
           <label for="reflection-input" id="reflection-prompt"></label>

@@ -377,6 +377,7 @@ const chapters = [
   {
     kicker: "Chapter 17",
     title: "A Rule of Discernment",
+    tool: "discernment",
     summary:
       "The constructive close offers a portable rule for evaluating practices by Christ, Scripture, church accountability, love, humility, and fruit.",
     questions: [
@@ -469,6 +470,8 @@ function renderChapter(index) {
   chapterButtons.forEach((button) => {
     button.classList.toggle("active", Number(button.dataset.chapter) === index);
   });
+
+  syncDiscernment(chapter);
 }
 
 chapterButtons.forEach((button) => {
@@ -484,5 +487,288 @@ saveButton.addEventListener("click", () => {
   localStorage.setItem(storageKey(currentChapter), reflectionInput.value);
   saveStatus.textContent = "Saved in this browser.";
 });
+
+// --- Discernment rubric (Chapter 17) ---
+
+const discernmentTool = document.querySelector("#discernment-tool");
+const discernmentPractice = document.querySelector("#discernment-practice");
+const discernmentCriteriaEl = document.querySelector("#discernment-criteria");
+const discernmentResult = document.querySelector("#discernment-result");
+const discernmentNotes = document.querySelector("#discernment-notes");
+const discernmentStatus = document.querySelector("#discernment-status");
+const discernmentSave = document.querySelector("#discernment-save");
+const discernmentExport = document.querySelector("#discernment-export");
+const discernmentReset = document.querySelector("#discernment-reset");
+
+const discernmentCriteria = [
+  {
+    id: "christ",
+    label: "Christ",
+    question: "Does it confess Jesus as Lord in substance, not merely vocabulary?",
+    gating: true,
+  },
+  {
+    id: "scripture",
+    label: "Scripture",
+    question: "Is it shaped and governed by the Word of God?",
+    gating: true,
+  },
+  {
+    id: "accountability",
+    label: "Accountability",
+    question: "Can it be practiced openly under wise pastoral accountability?",
+  },
+  {
+    id: "love",
+    label: "Love",
+    question: "Does it deepen love for God and neighbor?",
+  },
+  {
+    id: "humility",
+    label: "Humility",
+    question: "Does it foster humble dependence rather than the urge to control?",
+  },
+  {
+    id: "fruit",
+    label: "Fruit",
+    question: "Does it bear the fruit of repentance, faith, and obedience?",
+  },
+];
+
+const ratingOptions = [
+  { value: 0, label: "No" },
+  { value: 1, label: "Partly" },
+  { value: 2, label: "Yes" },
+];
+
+const recommendationLabels = {
+  receive: "Receive",
+  revise: "Revise",
+  pause: "Pause",
+  reject: "Reject",
+};
+
+const discernmentStorageKey = "theurgia-discernment";
+const discernmentMax = discernmentCriteria.length * 2;
+
+function buildCriteria() {
+  discernmentCriteria.forEach((criterion) => {
+    const fieldset = document.createElement("fieldset");
+    fieldset.className = "criterion";
+
+    const legend = document.createElement("legend");
+    legend.textContent = criterion.label;
+    fieldset.append(legend);
+
+    const questionEl = document.createElement("p");
+    questionEl.className = "criterion-q";
+    questionEl.textContent = criterion.question;
+    fieldset.append(questionEl);
+
+    const ratings = document.createElement("div");
+    ratings.className = "ratings";
+    ratingOptions.forEach((option) => {
+      const id = `${criterion.id}-${option.value}`;
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = criterion.id;
+      input.id = id;
+      input.value = String(option.value);
+      input.addEventListener("change", computeAndRender);
+
+      const label = document.createElement("label");
+      label.setAttribute("for", id);
+      label.textContent = option.label;
+
+      ratings.append(input, label);
+    });
+    fieldset.append(ratings);
+    discernmentCriteriaEl.append(fieldset);
+  });
+}
+
+function getScores() {
+  return discernmentCriteria.map((criterion) => {
+    const checked = discernmentCriteriaEl.querySelector(
+      `input[name="${criterion.id}"]:checked`,
+    );
+    return checked ? Number(checked.value) : null;
+  });
+}
+
+function computeRecommendation(scores) {
+  const answered = scores.filter((score) => score !== null).length;
+  if (answered < discernmentCriteria.length) {
+    return { state: "incomplete", answered };
+  }
+
+  const total = scores.reduce((sum, score) => sum + score, 0);
+  const gatingFail = discernmentCriteria.some(
+    (criterion, index) => criterion.gating && scores[index] === 0,
+  );
+
+  if (gatingFail) {
+    return {
+      state: "reject",
+      total,
+      reason:
+        "It falls short at the controlling center. A practice that will not confess Christ and submit to Scripture cannot be carried by its other strengths.",
+    };
+  }
+  if (total >= 10) {
+    return {
+      state: "receive",
+      total,
+      reason:
+        "This practice looks consonant with the rule. Receive it gladly, and keep watching its fruit over time.",
+    };
+  }
+  if (total >= 7) {
+    return {
+      state: "revise",
+      total,
+      reason:
+        "There is real good here, but reshape the weaker areas, and test it with your church, before leaning on it.",
+    };
+  }
+  if (total >= 4) {
+    return {
+      state: "pause",
+      total,
+      reason:
+        "Too many questions stand open. Set the practice aside and seek wise counsel before going further.",
+    };
+  }
+  return {
+    state: "reject",
+    total,
+    reason: "Measured against the rule, this practice works more against faith than for it.",
+  };
+}
+
+function computeAndRender() {
+  const result = computeRecommendation(getScores());
+  discernmentResult.dataset.state = result.state;
+  discernmentStatus.textContent = "";
+
+  if (result.state === "incomplete") {
+    discernmentResult.textContent = `Score all six criteria for a recommendation (${result.answered} of ${discernmentCriteria.length} done).`;
+    return;
+  }
+
+  discernmentResult.textContent = `${recommendationLabels[result.state]} (score ${result.total} of ${discernmentMax}). ${result.reason}`;
+}
+
+function saveDiscernment() {
+  const data = {
+    practice: discernmentPractice.value,
+    notes: discernmentNotes.value,
+    scores: getScores(),
+  };
+  localStorage.setItem(discernmentStorageKey, JSON.stringify(data));
+  discernmentStatus.textContent = "Saved in this browser.";
+}
+
+function loadDiscernment() {
+  const raw = localStorage.getItem(discernmentStorageKey);
+  if (!raw) return;
+
+  let data;
+  try {
+    data = JSON.parse(raw);
+  } catch (error) {
+    return;
+  }
+
+  discernmentPractice.value = data.practice || "";
+  discernmentNotes.value = data.notes || "";
+  (data.scores || []).forEach((score, index) => {
+    if (score === null || score === undefined) return;
+    const criterion = discernmentCriteria[index];
+    if (!criterion) return;
+    const input = discernmentCriteriaEl.querySelector(
+      `input[name="${criterion.id}"][value="${score}"]`,
+    );
+    if (input) input.checked = true;
+  });
+}
+
+function exportDiscernment() {
+  const scores = getScores();
+  const result = computeRecommendation(scores);
+  const recommendation =
+    result.state === "incomplete"
+      ? "Recommendation: (score all six criteria)"
+      : `Recommendation: ${recommendationLabels[result.state]} (score ${result.total} of ${discernmentMax})`;
+
+  const lines = [
+    "Theurgia: Discernment rubric",
+    `Date: ${new Date().toISOString().slice(0, 10)}`,
+    `Practice: ${discernmentPractice.value || "(unnamed)"}`,
+    "",
+    "Criteria:",
+    ...discernmentCriteria.map((criterion, index) => {
+      const score = scores[index];
+      const rating = score === null ? "unscored" : ratingOptions[score].label;
+      return `- ${criterion.label}: ${rating}`;
+    }),
+    "",
+    recommendation,
+    result.reason || "",
+    "",
+    "Notes:",
+    discernmentNotes.value || "(none)",
+    "",
+  ];
+
+  const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const slug =
+    (discernmentPractice.value || "practice")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "practice";
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = `discernment-${slug}.txt`;
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  URL.revokeObjectURL(url);
+  discernmentStatus.textContent = "Exported a text file.";
+}
+
+function resetDiscernment() {
+  discernmentPractice.value = "";
+  discernmentNotes.value = "";
+  discernmentCriteriaEl
+    .querySelectorAll("input[type='radio']")
+    .forEach((input) => {
+      input.checked = false;
+    });
+  localStorage.removeItem(discernmentStorageKey);
+  computeAndRender();
+  discernmentStatus.textContent = "Cleared.";
+}
+
+function syncDiscernment(chapter) {
+  const active = chapter.tool === "discernment";
+  discernmentTool.hidden = !active;
+  if (active) {
+    loadDiscernment();
+    computeAndRender();
+  }
+}
+
+buildCriteria();
+discernmentPractice.addEventListener("input", () => {
+  discernmentStatus.textContent = "";
+});
+discernmentNotes.addEventListener("input", () => {
+  discernmentStatus.textContent = "";
+});
+discernmentSave.addEventListener("click", saveDiscernment);
+discernmentExport.addEventListener("click", exportDiscernment);
+discernmentReset.addEventListener("click", resetDiscernment);
 
 renderChapter(currentChapter);
