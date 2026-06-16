@@ -6,11 +6,19 @@ Theurgia is an interactive book outline for an honest, Christ-centered
 assessment, via systematic Biblical theology, of musical topics and adjacent
 spiritual practices:
 
-- relics
-- self-fulfilling prophecy
+- music and formation
+- the Christian mystical tradition
+- relics, images, and memory
+- the sacraments and the means of grace
+- self-fulfilling prophecy and speech
 - prayer
-- meditation
+- meditation and contemplative silence
+- practices drawn from other faiths
 - incantations
+
+The title is deliberate and ironic: *theurgy* once named ritual that tried to
+compel the divine, and the book turns the word inside out to confess that the
+only true god-working is God's own work for us in Christ.
 
 ## Interactive book prototype
 
@@ -18,7 +26,8 @@ The current prototype is a static GitHub Pages-ready site with:
 
 - a chapter-by-chapter outline for the book;
 - interactive navigation between chapters;
-- chapter questions and proposed interactive elements;
+- key Scripture passages, core questions, and proposed interactive elements
+  per chapter;
 - private browser-local reflection notes for each chapter.
 
 Open `index.html` locally, or serve the repository root with any static web
