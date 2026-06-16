@@ -6,3 +6,4 @@ An honest, Christ-centered assessment, via systematic Biblical theology, of musi
 * self-fulfilling prophecy
 * prayer
 * meditation
+* incantations
