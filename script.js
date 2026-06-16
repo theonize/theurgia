@@ -178,6 +178,28 @@ const chapters = [
   },
   {
     kicker: "Chapter 8",
+    title: "Spiritual Gifts and the Spirit's Power",
+    summary:
+      "Moving from prophecy to the wider gifts, the book considers tongues, healing, words of knowledge, and miracles as real works of the Spirit for building up the church, and weighs the cessationist and continuationist debate without quenching the Spirit or chasing spectacle.",
+    questions: [
+      "What are spiritual gifts for, and how does love govern their use in the assembly?",
+      "How should Christians weigh the cessationist and continuationist readings of tongues, healing, and prophecy?",
+      "When does hunger for the miraculous slide into spectacle, pressure, or the manufacture of signs?",
+    ],
+    interactions: [
+      "A gifts inventory tied to the body-of-Christ texts rather than to personality.",
+      "An order-of-worship guide for exercising gifts with intelligibility, testing, and peace.",
+    ],
+    passages: [
+      "1 Corinthians 12:4-11 (varieties of gifts, one Spirit)",
+      "1 Corinthians 14:1-25 (intelligible upbuilding over private ecstasy)",
+      "Acts 2:1-12 (tongues understood at Pentecost)",
+      "James 5:13-16 (prayer and anointing for the sick)",
+    ],
+    prompt: "Which spiritual gift do you most desire, and what do you want it for?",
+  },
+  {
+    kicker: "Chapter 9",
     title: "Prayer and Petition",
     summary:
       "Prayer is framed as childlike communion with the Father through the Son by the Spirit, not a technique for forcing divine outcomes.",
@@ -199,7 +221,29 @@ const chapters = [
     prompt: "Which part of prayer feels most difficult for you right now?",
   },
   {
-    kicker: "Chapter 9",
+    kicker: "Chapter 10",
+    title: "Fasting and the Body",
+    summary:
+      "The book turns to the body as a place of discipleship, treating fasting, feasting, and Sabbath as ways the whole person seeks God, while refusing any view that earns merit or despises the flesh God made and will raise.",
+    questions: [
+      "What does Scripture promise, and refuse to promise, to the one who fasts?",
+      "How do fasting, feasting, and Sabbath together train desire and trust?",
+      "When does bodily discipline curdle into earning, performance, or contempt for the body?",
+    ],
+    interactions: [
+      "A rhythm planner for fasting, feasting, and Sabbath across a season.",
+      "A motive examen distinguishing hunger for God from hunger for control or merit.",
+    ],
+    passages: [
+      "Isaiah 58:1-12 (the fast that God chooses)",
+      "Matthew 6:16-18 (fast in secret, not for show)",
+      "Matthew 9:14-17 (fasting and the presence of the bridegroom)",
+      "1 Corinthians 6:19-20 (glorify God in your body)",
+    ],
+    prompt: "What does your body do when you are anxious for God to act, and what might fasting reorder?",
+  },
+  {
+    kicker: "Chapter 11",
     title: "Meditation and Attention",
     summary:
       "Meditation is presented as Scripture-saturated attention that renews the mind, trains desire, and rests in God's presence.",
@@ -221,7 +265,7 @@ const chapters = [
     prompt: "What most often captures your attention away from God and neighbor?",
   },
   {
-    kicker: "Chapter 10",
+    kicker: "Chapter 12",
     title: "Contemplative Prayer and the Silence",
     summary:
       "Building on Scripture-filled meditation, the book weighs centering prayer, the Jesus Prayer, breath prayer, and the summons to silence, distinguishing rest in a God who has spoken from techniques that seek an empty or contentless union.",
@@ -243,7 +287,29 @@ const chapters = [
     prompt: "What happens in you when you try to be silent before God?",
   },
   {
-    kicker: "Chapter 11",
+    kicker: "Chapter 13",
+    title: "Divine Hiddenness and the Dark Night",
+    summary:
+      "Against the demand for constant experience, the book honors the seasons when God seems absent, reading dryness, waiting, and the dark night as places where faith is purified rather than signs that something has gone wrong.",
+    questions: [
+      "How does Scripture portray the felt absence of God, and how do the saints pray through it?",
+      "What distinguishes the dark night of purifying faith from the dullness of unrepented sin or despair?",
+      "How can believers love and obey God when feeling and assurance run dry?",
+    ],
+    interactions: [
+      "A psalter map pairing seasons of the soul with psalms that voice them.",
+      "A waiting journal that tracks fidelity rather than feeling.",
+    ],
+    passages: [
+      "Psalm 88 (a prayer that ends in darkness)",
+      "Psalm 42-43 (why are you cast down, O my soul)",
+      "Job 23:1-12 (I go forward but he is not there)",
+      "Isaiah 50:10 (walking in darkness, trusting the name of the Lord)",
+    ],
+    prompt: "Where has God felt absent, and what has kept you, or failed to keep you, holding on?",
+  },
+  {
+    kicker: "Chapter 14",
     title: "Practices from Other Faiths",
     summary:
       "The book asks how Christians should treat practices with non-Christian roots, from yoga and mindfulness to mantras and energy healing, discerning what may be received as common grace, what must be reformed, and what cannot be baptized.",
@@ -265,7 +331,7 @@ const chapters = [
     prompt: "Which practice from another tradition are you drawn to, and what does it promise you?",
   },
   {
-    kicker: "Chapter 12",
+    kicker: "Chapter 15",
     title: "Incantations and Power",
     summary:
       "This chapter confronts practices that use sacred words, sounds, or formulas as mechanisms of control rather than acts of faith.",
@@ -287,7 +353,29 @@ const chapters = [
     prompt: "Where do you see spiritual language used as a guarantee of control?",
   },
   {
-    kicker: "Chapter 13",
+    kicker: "Chapter 16",
+    title: "Spiritual Warfare and Deliverance",
+    summary:
+      "The book confronts the reality of the demonic and the church's authority in Christ, charting a course between the denial that treats evil as mere metaphor and the obsession that sees a demon behind every struggle or turns deliverance into technique.",
+    questions: [
+      "What authority does the believer actually have over evil powers, and from where does it come?",
+      "How do Scripture's accounts of deliverance differ from spiritual mapping, formulas, and sensational deliverance ministry?",
+      "How should the church discern between the demonic, the bodily, and the sinful without collapsing them?",
+    ],
+    interactions: [
+      "A spiritual-armor study mapping Ephesians 6 onto everyday faithfulness.",
+      "A pastoral checklist for sober, accountable care in cases of suspected oppression.",
+    ],
+    passages: [
+      "Ephesians 6:10-18 (the whole armor of God)",
+      "Luke 10:17-20 (rejoice that your names are written in heaven)",
+      "Mark 9:14-29 (a deliverance that comes only by prayer)",
+      "Acts 19:13-16 (the sons of Sceva and borrowed authority)",
+    ],
+    prompt: "Where are you tempted either to ignore spiritual evil or to become preoccupied with it?",
+  },
+  {
+    kicker: "Chapter 17",
     title: "A Rule of Discernment",
     summary:
       "The constructive close offers a portable rule for evaluating practices by Christ, Scripture, church accountability, love, humility, and fruit.",

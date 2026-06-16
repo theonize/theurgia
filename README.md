@@ -10,11 +10,12 @@ spiritual practices:
 - the Christian mystical tradition
 - relics, images, and memory
 - the sacraments and the means of grace
-- self-fulfilling prophecy and speech
-- prayer
+- prophecy, speech, and the spiritual gifts
+- prayer and fasting
 - meditation and contemplative silence
+- divine hiddenness and the dark night
 - practices drawn from other faiths
-- incantations
+- incantations, spiritual warfare, and deliverance
 
 The title is deliberate and ironic: *theurgy* once named ritual that tried to
 compel the divine, and the book turns the word inside out to confess that the
