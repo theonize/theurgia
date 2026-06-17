@@ -337,3 +337,81 @@ footer {
     position: static;
   }
 }
+
+.toc-details summary {
+  align-items: center;
+  color: var(--accent-dark);
+  cursor: pointer;
+  display: flex;
+  font-family: system-ui, sans-serif;
+  font-weight: 800;
+  gap: 0.75rem;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.toc-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-details summary::after {
+  border: solid var(--accent);
+  border-width: 0 2px 2px 0;
+  content: "";
+  height: 0.45rem;
+  transform: rotate(45deg);
+  transition: transform 160ms ease;
+  width: 0.45rem;
+}
+
+.toc-details[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+#toc-current {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  max-width: 13rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toc-details nav {
+  margin-top: 0.9rem;
+  max-height: min(68vh, 42rem);
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+
+.didactic li + li {
+  margin-top: 0.55rem;
+}
+
+@media (min-width: 981px) {
+  .reader {
+    grid-template-columns: minmax(190px, 240px) minmax(0, 1fr);
+  }
+
+  .toc {
+    padding: 0.9rem;
+  }
+
+  .chapter-link {
+    font-size: 0.92rem;
+    padding: 0.45rem 0.65rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .reader {
+    grid-template-columns: 1fr;
+  }
+
+  .toc {
+    position: sticky;
+    top: 0.5rem;
+    z-index: 5;
+  }
+}
