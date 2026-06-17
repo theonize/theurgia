@@ -25,7 +25,11 @@
 
     <main id="reader" class="reader" aria-live="polite">
       <aside class="toc" aria-label="Book outline">
-        <h2>Chapters</h2>
+        <details class="toc-details" open>
+          <summary>
+            <span>Chapters</span>
+            <span id="toc-current">Preface</span>
+          </summary>
         <nav>
           <button class="chapter-link active" data-chapter="0">Preface</button>
           <button class="chapter-link" data-chapter="1">1. The Gospel Center</button>
@@ -47,6 +51,7 @@
           <button class="chapter-link" data-chapter="17">17. Discernment Rule</button>
           <button class="chapter-link" data-chapter="18">Appendices</button>
         </nav>
+        </details>
       </aside>
 
       <article class="chapter-card">
@@ -57,6 +62,11 @@
         <section class="chapter-section">
           <h3>Key passages</h3>
           <ul id="chapter-passages" class="passages"></ul>
+        </section>
+
+        <section class="chapter-section didactic">
+          <h3>Exegetical / didactic notes</h3>
+          <ul id="chapter-didactic"></ul>
         </section>
 
         <section class="chapter-section">

@@ -425,6 +425,7 @@ const kicker = document.querySelector("#chapter-kicker");
 const title = document.querySelector("#chapter-title");
 const summary = document.querySelector("#chapter-summary");
 const passages = document.querySelector("#chapter-passages");
+const didactic = document.querySelector("#chapter-didactic");
 const questions = document.querySelector("#chapter-questions");
 const interactions = document.querySelector("#chapter-interactions");
 const prompt = document.querySelector("#reflection-prompt");
@@ -433,6 +434,8 @@ const saveButton = document.querySelector("#save-reflection");
 const saveStatus = document.querySelector("#save-status");
 const previousButton = document.querySelector("#previous-chapter");
 const nextButton = document.querySelector("#next-chapter");
+const tocCurrent = document.querySelector("#toc-current");
+const tocDetails = document.querySelector(".toc-details");
 
 let currentChapter = 0;
 
@@ -444,6 +447,16 @@ function renderList(element, items) {
       return li;
     }),
   );
+}
+
+function didacticNotes(chapter) {
+  const primaryPassage = chapter.passages[0] || "the chapter's primary text";
+  const secondaryPassage = chapter.passages[1] || "the supporting texts";
+  return [
+    `Exegetical focus: begin with ${primaryPassage}, reading the passage in its literary setting before drawing conclusions about practice.`,
+    `Canonical connection: compare ${secondaryPassage} with the chapter's Gospel center so the practice is interpreted by Christ, grace, and Scripture rather than by technique or fear.`,
+    `Didactic aim: expand this chapter into a teaching section that defines contested terms, names pastoral dangers, and gives readers one concrete act of faithful obedience.`,
+  ];
 }
 
 function storageKey(index) {
@@ -458,11 +471,13 @@ function renderChapter(index) {
   title.textContent = chapter.title;
   summary.textContent = chapter.summary;
   renderList(passages, chapter.passages);
+  renderList(didactic, chapter.didactic || didacticNotes(chapter));
   renderList(questions, chapter.questions);
   renderList(interactions, chapter.interactions);
   prompt.textContent = chapter.prompt;
   reflectionInput.value = localStorage.getItem(storageKey(index)) || "";
   saveStatus.textContent = "";
+  tocCurrent.textContent = `${chapter.kicker}: ${chapter.title}`;
 
   previousButton.disabled = index === 0;
   nextButton.disabled = index === chapters.length - 1;
@@ -475,7 +490,12 @@ function renderChapter(index) {
 }
 
 chapterButtons.forEach((button) => {
-  button.addEventListener("click", () => renderChapter(Number(button.dataset.chapter)));
+  button.addEventListener("click", () => {
+    renderChapter(Number(button.dataset.chapter));
+    if (window.matchMedia("(max-width: 980px)").matches) {
+      tocDetails.open = false;
+    }
+  });
 });
 
 previousButton.addEventListener("click", () => renderChapter(Math.max(0, currentChapter - 1)));
