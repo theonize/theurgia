@@ -49,10 +49,22 @@ const chapters = [
     title: "Biblical Mysticism",
     summary:
       "A survey of how God draws near, from theophany and temple to incarnation and Pentecost, gives Christian mysticism a positive Biblical shape, then marks where it parts from occult mastery, spectacle, and forbidden divination.",
+    didactic: [
+      "Begin with the pattern of divine initiative: in Exodus 24 the elders do not climb into heaven by technique; they are summoned by covenant grace, protected by God's mercy, and given table fellowship that anticipates worship, communion, and reverent fear.",
+      "Trace the movement from mediated presence to personal presence: tabernacle, temple, priesthood, and prophetic vision prepare readers for John 1, where the glory that once filled sacred space is revealed in the incarnate Son who exegetes the Father.",
+      "Read Pentecost as fulfillment rather than spiritual spectacle: Acts 2 gives bold witness, intelligible proclamation, repentance, baptism, and gathered fellowship, so Spirit-filled experience is tested by confession of Christ and incorporation into the church.",
+      "Distinguish Biblical mystery from occult secrecy: mystery in Scripture is God's once-hidden purpose now disclosed in Christ, while forbidden divination seeks hidden knowledge or leverage apart from trustful obedience.",
+      "Name the posture of faithful encounter: receiving, trembling, listening, repenting, and obeying. The saints are transformed by God's nearness, but they never possess God as an energy, object, or predictable force.",
+      "Teach readers to honor experience without enthroning it: genuine encounters must be interpreted by Scripture, bear the fruit of holiness and love, remain accountable to the church, and yield deeper dependence on Christ rather than fascination with the extraordinary.",
+    ],
     questions: [
-      "How do theophany, temple, incarnation, and Pentecost shape Christian encounter?",
-      "What is the difference between revelation received and power seized?",
-      "How should readers weigh experience without enthroning experience?",
+      "How do theophany, temple, incarnation, and Pentecost together form a Biblical grammar for encounter with God?",
+      "Where does Scripture emphasize God's initiative, holiness, mediation, and covenant promise in scenes of divine nearness?",
+      "What is the difference between revelation received by faith and power seized through technique, secrecy, or forbidden spiritual leverage?",
+      "How does the incarnation of the Word correct vague ideas of mystical union by anchoring knowledge of God in Jesus Christ?",
+      "How does Pentecost distinguish Spirit-filled communion from spectacle, private ecstasy, or spiritual status seeking?",
+      "When should an experience be received with gratitude, tested with caution, or rejected as contrary to Scripture?",
+      "How can readers weigh dreams, impressions, beauty, awe, silence, and strong emotion without making experience the final authority?",
     ],
     interactions: [
       "A timeline of major Biblical encounter scenes.",
