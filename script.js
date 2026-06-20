@@ -83,10 +83,25 @@ const chapters = [
     title: "The Christian Mystical Tradition",
     summary:
       "Before judging mysticism, the book listens to it, tracing how the Desert Fathers, Pseudo-Dionysius, the medieval contemplatives, Orthodox hesychasm, and the Reformed sense of the heart sought God, and where each tradition illumines or endangers Gospel faith.",
+    didactic: [
+      "Frame the chapter as charitable historical listening under Biblical judgment: readers should meet the mystical tradition neither as tourists hunting exotic experiences nor as prosecutors flattening every contemplative writer into error, but as disciples testing all things by Christ, Scripture, and the Gospel of grace.",
+      "Begin with the Desert Fathers and Mothers as a protest against nominal Christianity: their withdrawal, fasting, watchfulness, and short sayings expose the divided heart, yet their example must be distinguished from any idea that isolation, severity, or heroic ascetic achievement can purchase holiness.",
+      "Explain Pseudo-Dionysius carefully because his vocabulary shaped centuries of Christian contemplation: the language of ascent, hierarchy, negation, and divine darkness can protect God's incomprehensibility, but it becomes dangerous when Neoplatonic return or quasi-theurgic mediation eclipses the incarnate Son and the plain promises of the Gospel.",
+      "Set Augustine in the chapter as both participant and critic: he knows interiority, longing, beauty, and contemplative ascent, but he redirects the restless heart away from self-powered return and toward grace, confession, the church's worship, and the God who descends in mercy before the soul rises in love.",
+      "Treat medieval contemplatives with discriminating sympathy: Bernard, Bonaventure, The Cloud of Unknowing, Julian, and others often testify to love, humility, suffering, and prayer, while also raising questions about merit, purgation, visionary authority, Marian devotion, and the relation between affective experience and the sufficiency of Christ.",
+      "Describe Orthodox hesychasm from the inside before evaluating it: the Jesus Prayer, watchfulness, stillness, and the Palamite distinction between God's essence and energies aim to guard real communion without claiming comprehension, yet Protestant readers must ask how bodily technique, repetition, spiritual direction, and claims of uncreated light are governed by Scripture.",
+      "Include the Reformed and Puritan account of the heart so the tradition is not reduced to Catholic and Orthodox sources: Calvin, Owen, Sibbes, Edwards, and hymn writers speak of union with Christ, assurance, affections, communion with God, and spiritual delight while insisting that Word, Spirit, faith, and ordinary means remain central.",
+      "Define a retrieval rule for the rest of the book: receive what magnifies Christ, deepens repentance, strengthens ordinary obedience, and humbles the reader; revise what is ambiguous by Scripture; and reject what grants spiritual authority to technique, private revelation, elitist secrecy, or any mediator that rivals Christ.",
+    ],
     questions: [
-      "What have Christians across the centuries actually meant by union with God, the dark night, and the prayer of the heart?",
-      "Where did the tradition draw on Neoplatonism and theurgy, and how did figures like Augustine resist it?",
-      "How can later readers receive the tradition's wisdom without inheriting its errors?",
+      "What have Christians across the centuries actually meant by union with God, contemplation, the dark night, apophatic prayer, and the prayer of the heart?",
+      "How do the Desert traditions expose distraction, vainglory, and spiritual compromise, and where can ascetic discipline slip into works-righteousness or contempt for ordinary vocations?",
+      "Where did the tradition draw on Platonism, Neoplatonism, and theurgy, and how did figures like Augustine receive, correct, or resist those frameworks?",
+      "When does apophatic language rightly confess that God exceeds creaturely comprehension, and when does it become vague spirituality detached from the incarnate Word?",
+      "How should Protestant readers evaluate medieval accounts of contemplation, visions, bridal mysticism, purgation, and affective union without either dismissing them wholesale or accepting them uncritically?",
+      "What claims does hesychasm make about stillness, repetition, bodily prayer, spiritual direction, divine energies, and the vision of light, and which claims require special Biblical testing?",
+      "How do Reformed writers on union with Christ, assurance, communion with God, and religious affections offer a distinctly Gospel-centered account of deep experience?",
+      "Which historical practices can be retrieved as wisdom, which must be reinterpreted, and which should be rejected because they obscure Christ's sufficiency or promise spiritual leverage through technique?",
     ],
     interactions: [
       "A timeline of contemplative writers from the Desert Fathers to Edwards.",
