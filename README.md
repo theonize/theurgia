@@ -1,4 +1,4 @@
-# [Theurgia](theonize.github.io/theurgia)
+# [Theurgia](https://theonize.github.io/theurgia)
 
 Gospel-aligned Biblical mysticism.
 "Mysticism" is a profoundly uncomfortable topic for Bible-believing Christians- rightly so.
