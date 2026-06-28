@@ -1,7 +1,7 @@
 # theurgia
 
 Gospel-aligned Biblical mysticism.
-"Mysticism" is a probably uncomfortable topic for Bible-believing Christians- rightly so.
+"Mysticism" is a profoundly uncomfortable topic for Bible-believing Christians- rightly so.
 There is powerful spiritual technology available to us which, with even an ounce of pride, can push us into darkness.
 But we cannot simultaneously hold to the virgin birth of our Lord and the deny the daily miracles that sustain us.
 Wen must take seriously the powerful inherent spirituality of our world.
